@@ -1,24 +1,36 @@
-﻿@{
+﻿@*
+    Home page view - Language Learning Information
+    Displays educational content about efficient language acquisition methods
+    Uses linguistic structure to guide learning progression
+*@
+
+@{
+    // Set the page title shown in the browser tab and layout
     ViewData["Title"] = "Language Acquisition";
 }
 
 <div class="text-center">
+    @* Main heading for the page *@
     <h1 class="display-4 mb-4">How to Learn Languages Efficiently</h1>
 
     <div class="container">
+        @* Introduction paragraph explaining common language learning challenges *@
         <p class="lead mb-3">
             Many people want to learn languages, but they don't know where to start. They end up doing Duolingo lessons for a couple of days before giving up. They end up giving up before they even start.
         </p>
 
+        @* Explanation of the structured approach to language learning *@
         <p class="mb-4">
             The order to learn a language most efficiently actually follows along perfectly with linguistic structure. Understanding the levels of language—from phonetics to discourse—helps you build a solid foundation and progress systematically.
         </p>
 
+        @* Visual diagram showing the hierarchy of linguistic levels *@
         <div class="mb-4">
             <h3 class="mb-3">Linguistic Levels</h3>
             <img src="~/images/linguisticLevels.avif" alt="Linguistic Levels Diagram" class="img-fluid mb-3" style="max-width: 700px;" />
         </div>
 
+        @* Chart illustrating the progression path for language learners *@
         <div class="mb-4">
             <h3 class="mb-3">Language Learning Progression</h3>
             <img src="~/images/LevelsChart.jpg" alt="Language Learning Levels Chart" class="img-fluid" style="max-width: 500px;" />

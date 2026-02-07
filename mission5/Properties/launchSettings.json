@@ -1,22 +1,29 @@
 ﻿{
+  // Launch Settings - Configuration for running the application during development
+  // Defines launch profiles for different run configurations (HTTP vs HTTPS)
+
   "$schema": "https://json.schemastore.org/launchsettings.json",
+
   "profiles": {
+    // HTTP Profile - Runs the application over unencrypted HTTP
     "http": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "applicationUrl": "http://localhost:5158",
+      "commandName": "Project",              // Runs the project directly (dotnet run)
+      "dotnetRunMessages": true,             // Show dotnet run messages in console
+      "launchBrowser": true,                 // Automatically open browser when app starts
+      "applicationUrl": "http://localhost:5158",  // HTTP endpoint URL
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development"   // Set environment to Development mode
       }
     },
+
+    // HTTPS Profile - Runs the application over secure HTTPS (Recommended)
     "https": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": true,
-      "applicationUrl": "https://localhost:7177;http://localhost:5158",
+      "commandName": "Project",              // Runs the project directly (dotnet run)
+      "dotnetRunMessages": true,             // Show dotnet run messages in console
+      "launchBrowser": true,                 // Automatically open browser when app starts
+      "applicationUrl": "https://localhost:7177;http://localhost:5158",  // HTTPS endpoint (7177) with HTTP fallback (5158)
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development"   // Set environment to Development mode
       }
     }
   }

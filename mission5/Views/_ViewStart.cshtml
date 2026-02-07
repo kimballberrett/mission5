@@ -1,3 +1,11 @@
-﻿@{
+﻿@*
+    View Start - Executed before rendering each view
+    Sets the default layout page for all views in the application
+    Individual views can override this by setting Layout = null or a different layout
+*@
+
+@{
+    // Set the default layout to _Layout.cshtml for all views
+    // This ensures consistent header, footer, and navigation across all pages
     Layout = "_Layout";
 }
