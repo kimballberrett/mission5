@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Tutoring Calculator";
+}
+
+<div class="container">
+    <div class="text-center mb-4">
+        <h1 class="display-4">Language Tutoring Calculator</h1>
+        <p class="lead">Calculate the cost of your personalized language learning sessions</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title text-center mb-4">Cost Calculator</h3>
+
+                    <div class="mb-3">
+                        <label for="hours" class="form-label">Number of Hours</label>
+                        <input type="number" class="form-control" id="hours" placeholder="Enter number of hours" min="0" step="0.5">
+                        <div id="hoursError" class="text-danger mt-1" style="display: none;">Please enter a valid positive number</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="hourlyRate" class="form-label">Hourly Rate</label>
+                        <input type="text" class="form-control" id="hourlyRate" value="$50.00" readonly>
+                    </div>
+
+                    <div class="d-grid gap-2 mb-3">
+                        <button id="calculateBtn" class="btn btn-primary btn-lg">Calculate Total</button>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="total" class="form-label">Total Cost</label>
+                        <input type="text" class="form-control" id="total" readonly placeholder="$0.00">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">
+                    ← Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/calculator.js" asp-append-version="true"></script>
+}
